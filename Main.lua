@@ -3538,7 +3538,9 @@ function Library:CreateWindow(...)
 
                 while Toggled and ScreenGui.Parent do
 					if not (identifyexecutor and identifyexecutor == "Krnl UWP") then
-                    	InputService.MouseIconEnabled = false;
+                    	InputService.MouseIconEnabled = true;
+						Cursor.Visible = false
+						CursorOutline.Visible = false
 					else
 						InputService.MouseIconEnabled = true;
 					end
@@ -3558,11 +3560,7 @@ function Library:CreateWindow(...)
                     RenderStepped:Wait();
                 end;
 
-				if not (identifyexecutor and identifyexecutor == "Krnl UWP") then
-                	InputService.MouseIconEnabled = false;
-				else
-					InputService.MouseIconEnabled = true;
-				end
+				InputService.MouseIconEnabled = true;
 
                 Cursor:Remove();
                 CursorOutline:Remove();
