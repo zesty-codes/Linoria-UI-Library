@@ -3537,7 +3537,7 @@ function Library:CreateWindow(...)
                 CursorOutline.Visible = true;
 
                 while Toggled and ScreenGui.Parent do
-					if not (identifyexecutor and identifyexecutor == "Krnl UWP") then
+					if not (identifyexecutor and identifyexecutor() == ("Krnl UWP") or (identifyexecutor and identifyexecutor():lower():find("fluxus")) ~= nil) then
                     	InputService.MouseIconEnabled = true;
 						Cursor.Visible = false
 						CursorOutline.Visible = false
