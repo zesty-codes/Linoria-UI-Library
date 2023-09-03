@@ -8,6 +8,7 @@ local TweenService = game:GetService('TweenService');
 local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
+local identifyexecutor = identifyexecutor or identifyexploit or identify_executor or identify_exploit or function() return "Fluxus UWP" end;
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
@@ -3537,7 +3538,7 @@ function Library:CreateWindow(...)
                 CursorOutline.Visible = true;
 
                 while Toggled and ScreenGui.Parent do
-					if not (identifyexecutor and identifyexecutor() == ("Krnl UWP") or (identifyexecutor and identifyexecutor():lower():find("fluxus")) ~= nil) then
+					if not (identifyexecutor and identifyexecutor() == "Krnl UWP") then
                     	InputService.MouseIconEnabled = true;
 						Cursor.Visible = false
 						CursorOutline.Visible = false
